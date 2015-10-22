@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <base href="file:///D:/uiux_kimjihyo/person-project/" target="_self" />
+    <!-- <base href="file:///D:/uiux_kimjihyo/person-project/" target="_self" /> -->
+    <!-- <base href="http://hyojane.dothome.co.kr/" target="_self" /> -->
+
+    <title>원더걸스 profile</title>
+    <style>
+
+    @import url(http://fonts.googleapis.com/css?family=Oswald);
+
+    @font-face {
+    	font-family: "Flaticon";
+    	src: url("../font/flaticon.eot");
+    	src: url("../font/flaticon.eot#iefix") format("embedded-opentype"),
+    	url("../font/flaticon.woff") format("woff"),
+    	url("../font/flaticon.ttf") format("truetype"),
+    	url("../font/flaticon.svg") format("svg");
+    	font-weight: normal;
+    	font-style: normal;
+    }
+
+    [class^="icon-"]:before, [class*="icon-"]:before,
+    [class^="icon-"]:after, [class*="icon-"]:after {
+    	font-family: Flaticon;
+        font-size: 20px;
+        font-style: normal;
+        margin-left: 20px;
+
+    }.icon-logotype42:before {
+    	content: "\e000";
+    }
+    .icon-twitter1:before {
+    	content: "\e001";
+    }
+    .icon-youtube18:before {
+    	content: "\e002";
+    }
+
+    html,body{height:100%}/*body영역은 사이즈가 없기에 body를 감싸고 있는*/
+    *{margin:0; padding:0}
+    ul,ol{list-style:none}
+    img{border:0 none, vertical-align:top;}/*ie 78에서 border 이 생김*/
+    fieldset{border:0 none; }/*ie6*/
+    legend{position:absolute; left:-9999px; top:-9999px; font-size:0}
+    a{text-decoration:none; color:#000}
+
+    header{height:100px; box-shadow: 0 2px 6px #999; position:absolute; width:100%}
+    header div{padding:0 20px}
+    header h1{width:104px; height:50px;
+      background-image: url("http://wondergirls.jype.com/images/logo-s.png") ;
+      padding:25px;
+      background-repeat:no-repeat;
+      background-position:50%;
+      float:left;
+      transition:1s;}
+
+    header h1:hover{
+      -moz-transform:scalex(-1);
+      -webkit-transform:scalex(-1);
+    }
+    header .gnb{float:right;  height:100px; line-height:100px}
+    header .gnb .btn-menu{display:none}
+    header .gnb ul{font-size:0; trnsition:200ms;}
+    header .gnb li{display:inline-block; transition:200ms}
+    header .gnb li:hover{line-height:100px}
+    header .gnb li a{
+            font-size:16px;
+            padding:0 18px;
+            display:block;
+            font-family: "Oswald",sans-serif;
+            transition:200ms}
+
+    header .gnb li a:hover{border-top:3px #f00 solid }
+
+    .section#wg_profile{
+        height:100%;
+        background:url("http://wondergirls.jype.com/images/profile/large/1.jpg")no-repeat;
+        background-size:cover;
+        background-position:40% 50%;
+        }
+
+    .section#wg_profile .nextimgbtn{background:url("http://wondergirls.jype.com/images/nextImgBtn.png")no-repeat; position:absolute; right:0}
+    .section#wg_profile .previmgbtn{background:url("http://wondergirls.jype.com/images/prevImgBtn.png")no-repeat; position:absolute; left:0}
+    .section#wg_profile .nextimgbtn,.previmgbtn{width:50px; height:50px; display:block; top:45%; opacity: 0.8;}
+
+    #thumbnails_wrapper{width:250px; z-index:3; position:absolute; top:10px; left:10px; margin-left:8%; top:23%}
+    #thumbnails_wrapper>div>a{width:100px; height:100px; float:left; border:2px #fff solid;margin:5px}
+    #thumbnails_wrapper>div>a>img{width:100%; opacity:0.8}
+
+
+        @media screen and (max-width:769px){
+            header .gnb .btn-menu{
+            display:block;
+            font-family: "Oswald",sans-serif;
+            font-size:14px;
+            line-height:21px;
+            text-align:center;
+            margin-top:-6px;
+            padding:20px 50px;
+            border: 0 none;
+            background-color:#cd2d4c;
+            color:#fff;
+            position:absolute;
+            right:0; top:0
+            }
+
+            header .gnb ul{display:block; margin-top:55px; width:157px; position:absolute; right:0; transition:200ms  }
+            /*header .gnb ul:target{display:block}*/
+            header .gnb ul li{display:block; line-height:46px; transition:200ms}
+            header .gnb ul li:hover{line-height:46px; border:0 }
+            header .gnb ul li a{border:0 none}
+
+            .section#wg_profile{
+                height:100%;
+                background:#eff4ee url("http://wondergirls.jype.com/images/profile/large/1.jpg");
+                background-repeat:no-repeat;
+                background-size:cover;  /*contain상하를 체움 cover:좌우를 체움*/
+                background-position: 40% 50% ;
+
+                    }
+                #thumbnails_wrapper{width:250px; z-index:3; position:absolute; top:10px; left:10px; margin-left:5%; top:23%}
+                #thumbnails_wrapper>div>a{width:80px; height:80px; float:left; border:2px #fff solid;margin:5px}
+                #thumbnails_wrapper>div>a>img{width:100%; opacity:0.8}
+
+
+
+            }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+        <h1><a href=""><img src="" alt=""></a></h1>
+        <nav class="gnb"><!--gnb 글로벌네비게이션바-, 전역   lnb 지역--->
+            <a class="btn-menu" href="#mainmenu">MainMenu</a>
+            <ul id="mainmenu">
+                <li><a href="#wg_profile">PROFILE</a></li>
+                <li><a href="">DISCOGRAPHY</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">VIDEO</a></li>
+                <li><a href="">NOTICE</a></li>
+                <li><a href="">SCHDULE</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <div class="section" id="wg_profile">
+        <a class="nextimgbtn" href="#"></a>
+        <a class="previmgbtn" href="#"></a>
+    </div>
+    <div id="thumbnails_wrapper">
+        <div><a href="http://wondergirls.jype.com/images/profile/large/1.jpg"><img src="http://wondergirls.jype.com/images/profile/thumbs/1.jpg" alt=""></a></div>
+        <div><a href="http://wondergirls.jype.com/images/profile/large/2.jpg"><img src="http://wondergirls.jype.com/images/profile/thumbs/2.jpg" alt=""></a></div>
+        <div><a href="http://wondergirls.jype.com/images/profile/large/3.jpg"><img src="http://wondergirls.jype.com/images/profile/thumbs/3.jpg" alt=""></a></div>
+        <div><a href="http://wondergirls.jype.com/images/profile/large/4.jpg"><img src="http://wondergirls.jype.com/images/profile/thumbs/4.jpg" alt=""></a></div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
